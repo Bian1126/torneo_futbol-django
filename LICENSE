@@ -1,0 +1,3 @@
+docker compose run --rm generate
+docker compose run --rm manage startapp torneo
+
