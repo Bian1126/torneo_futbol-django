@@ -137,6 +137,12 @@ class Inscripcion(models.Model):
         on_delete=models.CASCADE,
         verbose_name=_('Equipo')
     )
+    categoria = models.ForeignKey(
+        Categoria,
+        on_delete=models.PROTECT,
+        verbose_name=_('Categoría'),
+        default=1  # Categoría por defecto temporal
+    )
     torneo = models.ForeignKey(
         Torneo,
         on_delete=models.CASCADE,
@@ -144,7 +150,7 @@ class Inscripcion(models.Model):
     )
 
     def __str__(self):
-        return f'{self.equipo.nombre} - {self.torneo.nombre}'
+        return f'{self.equipo.nombre} - {self.torneo.nombre} ({self.categoria.nombre})'
 
     class Meta:
         verbose_name = 'Inscripción'
