@@ -67,6 +67,7 @@ En el archivo `.env.db` utilizado para almacenar las variables de entorno necesa
 >Puedes copiar todo este bloque y pegarlo directamente en tu archivo `.env.db`.
 ```dotenv
 # .env.db
+# .env.db
 DATABASE_ENGINE=django.db.backends.postgresql
 POSTGRES_HOST=db
 POSTGRES_PORT=5432
@@ -76,6 +77,7 @@ PGUSER=${POSTGRES_USER}
 POSTGRES_PASSWORD=postgres
 LANG=es_AR.utf8
 POSTGRES_INITDB_ARGS="--locale-provider=icu --icu-locale=es-AR --auth-local=trust"
+
 ```
 
 ### 3. Levantar el proyecto
