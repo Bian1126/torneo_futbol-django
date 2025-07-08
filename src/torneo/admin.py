@@ -58,7 +58,6 @@ class CategoriaAdmin(admin.ModelAdmin):
 class InscripcionInlineFormset(BaseInlineFormSet):
     def clean(self):
         super().clean()
-        # Validación ejemplo: no permitir más de 1 inscripción del mismo equipo (puede expandirse si querés)
         equipos = []
         for form in self.forms:
             if form.cleaned_data and not form.cleaned_data.get('DELETE', False):
