@@ -30,6 +30,6 @@ docker compose run --rm manage loaddata torneo/fixtures/initial_data.json
 # 8. Mensaje final para el usuario
 echo ""
 echo "Proyecto inicializado correctamente."
-echo "Link de acceso: http://localhost:8001/admin"
+echo "Link de acceso: http://localhost:8000/admin"
 echo "Usuario: admin"
 echo "Contrasenia: admin"
