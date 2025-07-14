@@ -1,8 +1,14 @@
-# Tutorial: Despliegue del Proyecto "Torneo de Fútbol" en Django con Docker
+# Tutorial: Despliegue de "Torneo Fútbol" en Django con Docker + MongoDB v2
 
-Práctico de Mapeo Objeto-Relacional para la materia **Bases de Datos** de la carrera **Ingeniería en Sistemas**  
-Universidad Tecnológica Nacional - Facultad Regional Villa María
+Práctico de Mapeo Objeto-Relacional para la materia **Bases de Datos**, Ingeniería en Sistemas, UTN FRVM.
 
+**Stack:**  
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![Docker Desktop](https://img.shields.io/badge/Docker%20Desktop-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/products/docker-desktop)
+[![Django 5.1.11](https://img.shields.io/badge/Django%205.1.11-092E20?style=for-the-badge&logo=django&logoColor=white)](https://www.djangoproject.com/)
+[![Alpine Linux](https://img.shields.io/badge/Alpine%20Linux-0D597F?style=for-the-badge&logo=alpinelinux&logoColor=white)](https://alpinelinux.org/)
+[![Python 3.13](https://img.shields.io/badge/Python%203.13-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![PostgreSQL 15](https://img.shields.io/badge/PostgreSQL%2015-336791?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 ---
 
 ## Tecnologías utilizadas
@@ -10,7 +16,7 @@ Universidad Tecnológica Nacional - Facultad Regional Villa María
 * Docker + Docker Compose  
 * Django 5.1.11  
 * Python 3.13  
-* PostgreSQL 17  
+* PostgreSQL 15  
 * Alpine Linux  
 
 ---
@@ -37,20 +43,22 @@ En ningún caso los autores o titulares de derechos de autor serán responsables
 
 ## Introducción
 
-Este proyecto tiene como objetivo modelar y desplegar un sistema de gestión para **torneos de fútbol**.  
-A través del mismo se representan equipos, jugadores, partidos, canchas y categorías, con el fin de aplicar conceptos de mapeo objeto-relacional, relaciones entre entidades, migraciones y carga de datos iniciales.
+Este proyecto tiene como finalidad aplicar los contenidos vistos en la Cátedra de Bases de Datos mediante el desarrollo de un sistema de **gestión de torneos de fútbol**. Integra PostgreSQL y MongoDB para practicar conceptos de modelado y persistencia de datos en modelos relacionales y no relacionales.
 
 ---
 
 ## Requisitos Previos
 
 * Docker y Docker Compose instalados en tu sistema. Puedes consultar la [documentación oficial de Docker](https://docs.docker.com/get-started/get-docker/) para la instalación.
+* Recomendado: Docker Desktop instalado y en ejecución (recomendado para manejar visualmente los contenedores y facilitar la administración). [Descargar Docker Desktop](https://www.docker.com/products/docker-desktop/) 
 * Conocimientos básicos de Django y Python (no excluyente, el tutorial es autoexplicativo).
 
 ### Recursos Útiles
 
 * [Tutorial oficial de Django](https://docs.djangoproject.com/en/2.0/intro/tutorial01/)
 * [Cómo crear un entorno en Python](https://docs.djangoproject.com/en/2.0/intro/contributing/)
+* [Documentación oficial de Docker](https://docs.docker.com/get-started/)
+* [Guía rápida de Docker Compose](https://docs.docker.com/compose/gettingstarted/)
 
 ---
 
@@ -60,6 +68,7 @@ A través del mismo se representan equipos, jugadores, partidos, canchas y categ
 > Puedes copiar todo este bloque y pegarlo directamente en tu terminal.
 ```bash
 git clone https://github.com/Bian1126/torneo_futbol-django.git
+cd torneo_futbol-django
 ```
 
 ### 2. Configuración de Variables de Entorno
