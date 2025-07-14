@@ -111,7 +111,7 @@ docker compose up -d backend
 ```
 
 ### 4. Acceso a Torneo
-[http://localhost:8001/admin](http://localhost:8001/admin)
+[http://localhost:8000/admin](http://localhost:8000/admin)
 
 ---
 
